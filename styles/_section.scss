@@ -1,0 +1,72 @@
+section {
+    grid-area: section;
+    background-color: #201b2d;
+    height: calc(100vh - 30px);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    .workspace {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        list-style: none;
+
+        li {
+            span {
+                cursor: pointer;
+                user-select: none;
+                display: block;
+                margin: 10px 8px;
+
+                width: 30px;
+                height: 30px;
+                border: 2px solid rgb(90, 75, 129);
+                border-radius: 5px;
+
+                &:hover {
+                    border: 2px solid #e1e1e6;
+                }
+            }
+
+            &.active {
+                border-left: 2px solid #944F7D;
+                background-color: #282435;
+            }
+
+            &:not(:first-child) {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .config {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+
+        li {
+            span {
+                cursor: pointer;
+                user-select: none;
+                display: block;
+                margin: 10px 8px;
+
+                width: 30px;
+                height: 30px;
+                border: 2px solid rgb(90, 75, 129);
+                border-radius: 50%;
+
+                &:hover {
+                    border: 2px solid #e1e1e6;
+                }
+            }
+
+            &:not(:first-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Segoe WPC,Segoe UI, Segoe UI Emoji Regular,sans-serif;
+    color: #ffffff;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 48px 200px auto;
+    grid-template-areas: "header header header"
+                         "section aside main";
+
+    background-color: #191622;
+    overflow: hidden;
+}
+
+@import "header";
+@import "main";
+@import "aside";
+@import "section";

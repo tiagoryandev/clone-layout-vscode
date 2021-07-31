@@ -1,0 +1,119 @@
+aside {
+    grid-area: aside;
+    background-color: #13111b;
+    height: calc(100vh - 30px);
+
+    .explorer {
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+        padding: 0px 8px;
+
+        .content {
+            user-select: none;
+            padding: 8px;
+            font-size: 11px;
+            color: #e1e1e6;
+        }
+
+        .options {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin: 5px;
+            padding: 3px;
+
+            .point {
+                margin: 0px 1.5px;
+                width: 2px;
+                height: 2px;
+                border-radius: 50%;
+                background-color: #e1e1e6;
+            }
+
+            &:hover {
+                background-color: #29282f;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .workspace {
+        width: 100%;
+        background-color: #191622;
+        display: flex;
+        padding: 3px 5px;
+
+        .arrow {
+            display: flex;
+            align-items: center;
+
+            .line1,
+            .line2 {
+                width: 7px;
+                height: 1px;
+                background-color: #e1e1e6;
+            }
+
+            .line1 {
+                transform: rotate(45deg);
+            }
+
+            .line2 {
+                margin-left: -2px;
+                transform: rotate(-45deg);
+            }
+        }
+
+        .name {
+            margin-left: 5px;
+            cursor: pointer;
+            user-select: none;
+            font-size: 11px;
+            font-weight: bold;
+        }
+    }
+
+    .files {
+        width: 100%;
+        list-style: none;
+        height: calc(100vh - 82px);
+        overflow: hidden auto;
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: transparent;
+            transition: background-color 5s;
+
+            &:hover {
+                background-color: rgba(90, 93, 94, 0.31);
+            }
+        }
+
+        .list-file-paste {
+            cursor: pointer;
+            display: flex;
+            padding: 3px 20px;
+
+            svg {
+                width: 18px;
+            }
+
+            span {
+                margin-left: 5px;
+                user-select: none;
+                font-size: 13px;
+            }
+
+            &:hover {
+                background-color: #25242e;
+            }
+        }
+    }
+}
